@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+h1 {
+  margin: 0%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/************** section *************/
+
+.section
+{
+  background: linear-gradient(to right, #3B7BA7, #3B7BA7 50%, #fff 50% , white);
+}
+.section-odd {
+  background: linear-gradient(to right, #367099, #367099 50%, #f5f5f5 50% , #f5f5f5);
+  font-family: 'Lato', sans-serif;
+}
+
+/***********  container **************/
+.container {
+  display: flex;
+  max-width: 1000px;  
+  margin: auto;
+}
+
+.container--header {
+  height: 100vh;
+}
+
+.container--odd {
+  height: auto;
+}
+
+/***********  aside **************/
+aside {
+  flex: none;
+  width: 300px;
+  background-color: #3B7BA7;
+}
+
+
+.aside--odd {
+  background-color: #367099;
+  justify-content: flex-start;
+}
+
+/**************** header ***********/
+
+p {
+  color: "333";
+  line-height: 1.75;
+  font-size: 20px;
+
+}
+
+
+/************ main ***************/
+
+
+ 
+main {
+  flex: auto;
+  background: white;
+}
+
+.main--odd {
+  background-color: #f5f5f5;
+  justify-content: flex-start;
+}
+
+aside, main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  min-width: 0;
+}
+
+
+/************** les elements  *****************/
+h1:nth-child(1) {
+  color: black;
+  font-weight: bold;
+   font-size: 60px;
+}
+
+h1:nth-child(2) {
+  color: #7ba73b;
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+h1:nth-child(3) {
+  color: #939393;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.cartouche {
+  position: absolute;
+  bottom: calc(50px);
+}
+
+.fiche{
+
+  text-align: center;
+  border-top: 1px solid #939393;
+  width: 100%;
+
+
+}
+
+table.fiche tr td{
+    padding: 8px;
+}
+
+.table--odd tr::after{
+  content:'';
+  border-bottom: 1px dotted black;
+  flex: auto;
+  display: flex;
+}
