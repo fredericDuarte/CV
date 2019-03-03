@@ -3,7 +3,6 @@
 }
 
 body {
-
   font-family: 'Cinzel Decorative', cursive;
 }
 
@@ -17,19 +16,20 @@ img {
 
 /************** section *************/
 
-.section
-{
-  background: linear-gradient(to right, #3B7BA7, #3B7BA7 50%, #fff 50% , white);
+.section {
+  background: linear-gradient(to right, #3B7BA7, #3B7BA7 50%, #fff 50%, white);
 }
+
 .section-odd {
-  background: linear-gradient(to right, #367099, #367099 50%, #f5f5f5 50% , #f5f5f5);
+  background: linear-gradient(to right, #367099, #367099 50%, #f5f5f5 50%, #f5f5f5);
   font-family: 'Lato', sans-serif;
 }
 
 /***********  container **************/
+
 .container {
   display: flex;
-  max-width: 1000px;  
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -42,12 +42,12 @@ img {
 }
 
 /***********  aside **************/
+
 aside {
   flex: none;
   width: 300px;
   background-color: #3B7BA7;
 }
-
 
 .aside--odd {
   background-color: #367099;
@@ -60,14 +60,10 @@ p {
   color: "333";
   line-height: 1.75;
   font-size: 20px;
-
 }
-
 
 /************ main ***************/
 
-
- 
 main {
   flex: auto;
   background: white;
@@ -86,12 +82,12 @@ aside, main {
   min-width: 0;
 }
 
-
 /************** les elements  *****************/
+
 h1:nth-child(1) {
   color: black;
   font-weight: bold;
-   font-size: 60px;
+  font-size: 60px;
 }
 
 h1:nth-child(2) {
@@ -112,22 +108,34 @@ h1:nth-child(3) {
   bottom: calc(50px);
 }
 
-.fiche{
-
+.fiche {
   text-align: center;
   border-top: 1px solid #939393;
   width: 100%;
+}
 
+table.fiche tr td {
+  padding: 8px;
+}
+
+.table--odd {
+  width:100%;
+}
+
+.table--odd tr { 
+  display: flex;
+align-items: baseline;
 
 }
 
-table.fiche tr td{
-    padding: 8px;
-}
-
-.table--odd tr::after{
-  content:'';
+.table--odd tr::after {
+  content: '';
   border-bottom: 1px dotted black;
   flex: auto;
   display: flex;
+
+}
+
+.table--odd td {
+  order: 1;
 }
