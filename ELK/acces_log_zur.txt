@@ -1,0 +1,392 @@
+{
+  "_index": "ix_zur30_p0281_s0638_accesslog-2021.09.10-000001",
+  "_type": "_doc",
+  "_id": "be46bfef25fe4cc701202549fd894189c36048d91fee74873e5e63267cb87e80",
+  "_version": 1,
+  "_score": null,
+  "fields": {
+    "agent.version.keyword": [
+      "7.5.2"
+    ],
+    "adabo.keyword": [
+      "zur30"
+    ],
+    "host.name.keyword": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "bytes.keyword": [
+      "17407"
+    ],
+    "ident": [
+      "-"
+    ],
+    "geoip.region_name.keyword": [
+      "Rhône"
+    ],
+    "geoip.country_code2.keyword": [
+      "FR"
+    ],
+    "host.hostname": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "hostname": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "geoip.region_code.keyword": [
+      "69"
+    ],
+    "host.os.version": [
+      "7.9 (Maipo)"
+    ],
+    "clientip": [
+      "86.207.254.196"
+    ],
+    "geoip.city_name.keyword": [
+      "Saint-Jean-d'Ardieres"
+    ],
+    "user_agent.os.keyword": [
+      "Windows"
+    ],
+    "user_agent.build.keyword": [
+      ""
+    ],
+    "agent.id.keyword": [
+      "b8f84e29-c601-4421-bec5-196467dcaee7"
+    ],
+    "verb": [
+      "GET"
+    ],
+    "input.type": [
+      "log"
+    ],
+    "agent.hostname": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "agentApache.keyword": [
+      "\"Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36\""
+    ],
+    "user_agent.patch.keyword": [
+      "4515"
+    ],
+    "tags": [
+      "fb_p0281_s0638_accesslog"
+    ],
+    "host.architecture": [
+      "x86_64"
+    ],
+    "ident.keyword": [
+      "-"
+    ],
+    "agent.id": [
+      "b8f84e29-c601-4421-bec5-196467dcaee7"
+    ],
+    "host.containerized": [
+      false
+    ],
+    "geoip.latitude": [
+      46.125
+    ],
+    "agentApache": [
+      "\"Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36\""
+    ],
+    "user_agent.major.keyword": [
+      "92"
+    ],
+    "codehttp.keyword": [
+      "400"
+    ],
+    "input.type.keyword": [
+      "log"
+    ],
+    "geoip.postal_code.keyword": [
+      "69220"
+    ],
+    "geoip.region_code": [
+      "69"
+    ],
+    "tags.keyword": [
+      "fb_p0281_s0638_accesslog"
+    ],
+    "apacheTimestamp": [
+      "2021-09-16T12:04:46.000Z"
+    ],
+    "geoip.ip": [
+      "86.207.254.196"
+    ],
+    "agent.type": [
+      "filebeat"
+    ],
+    "user_agent.os_minor.keyword": [
+      "1"
+    ],
+    "host.os.kernel.keyword": [
+      "3.10.0-1160.31.1.el7.x86_64"
+    ],
+    "geoip.country_name": [
+      "France"
+    ],
+    "kafka_topic.keyword": [
+      "elisa.cats.app-uat.logs.zur30.p0281.s0638.accesslog"
+    ],
+    "user_agent.minor.keyword": [
+      "0"
+    ],
+    "host.id": [
+      "8a31f72736991f085a0c112b60b8ca80"
+    ],
+    "agent.type.keyword": [
+      "filebeat"
+    ],
+    "agent.ephemeral_id.keyword": [
+      "9141e4e8-eb49-4101-b27b-cd6e0ab17d16"
+    ],
+    "host.os.codename": [
+      "Maipo"
+    ],
+    "geoip.city_name": [
+      "Saint-Jean-d'Ardieres"
+    ],
+    "kafka_topic": [
+      "elisa.cats.app-uat.logs.zur30.p0281.s0638.accesslog"
+    ],
+    "geoip.ip.keyword": [
+      "86.207.254.196"
+    ],
+    "cr": [
+      "878"
+    ],
+    "@timestamp": [
+      "2021-09-16T12:04:48.677Z"
+    ],
+    "host.os.platform": [
+      "rhel"
+    ],
+    "log.file.path": [
+      "/var/log/ZUR30/BDIG/access.log"
+    ],
+    "auth.keyword": [
+      "-"
+    ],
+    "agent.ephemeral_id": [
+      "9141e4e8-eb49-4101-b27b-cd6e0ab17d16"
+    ],
+    "geoip.timezone": [
+      "Europe/Paris"
+    ],
+    "body.keyword": [
+      "-"
+    ],
+    "host.architecture.keyword": [
+      "x86_64"
+    ],
+    "auth": [
+      "-"
+    ],
+    "geoip.country_name.keyword": [
+      "France"
+    ],
+    "user_agent.patch": [
+      "4515"
+    ],
+    "body": [
+      "-"
+    ],
+    "user_agent.os_minor": [
+      "1"
+    ],
+    "user_agent.os_major": [
+      "8"
+    ],
+    "agent.hostname.keyword": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "ecs.version.keyword": [
+      "1.1.0"
+    ],
+    "geoip.coordinates": [
+      "4.7387",
+      "46.1248"
+    ],
+    "httpversion.keyword": [
+      "1.1"
+    ],
+    "host.os.name": [
+      "Red Hat Enterprise Linux Server"
+    ],
+    "host.id.keyword": [
+      "8a31f72736991f085a0c112b60b8ca80"
+    ],
+    "host.name": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "geoip.longitude": [
+      4.7382812
+    ],
+    "user_agent.os_nomcomplet": [
+      "Windows.8.1"
+    ],
+    "host.os.version.keyword": [
+      "7.9 (Maipo)"
+    ],
+    "user_agent.device.keyword": [
+      "Other"
+    ],
+    "cr.keyword": [
+      "878"
+    ],
+    "@version.keyword": [
+      "1"
+    ],
+    "geoip.region_name": [
+      "Rhône"
+    ],
+    "user_agent.name": [
+      "Chrome"
+    ],
+    "log.offset": [
+      602338
+    ],
+    "dateLog": [
+      "16/Sep/2021:14:04:46 +0200"
+    ],
+    "user_agent.build": [
+      ""
+    ],
+    "geoip.continent_code.keyword": [
+      "EU"
+    ],
+    "ecs.version": [
+      "1.1.0"
+    ],
+    "user_agent.os_name.keyword": [
+      "Windows"
+    ],
+    "user_agent.os_major.keyword": [
+      "8"
+    ],
+    "host.hostname.keyword": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "clientip.keyword": [
+      "86.207.254.196"
+    ],
+    "codehttp": [
+      "400"
+    ],
+    "agent.version": [
+      "7.5.2"
+    ],
+    "geoip.continent_code": [
+      "EU"
+    ],
+    "host.os.family": [
+      "redhat"
+    ],
+    "hostname.keyword": [
+      "hlzurp0apa3o.yres.ytech"
+    ],
+    "request": [
+      "/content/ca/cr878/npc/fr/particulier/acceder-a-mes-comptes/_jcr_content/contexthub.commerce.smartlists.json"
+    ],
+    "user_agent.os_name": [
+      "Windows"
+    ],
+    "geoip.country_code3.keyword": [
+      "FR"
+    ],
+    "user_agent.name.keyword": [
+      "Chrome"
+    ],
+    "dateLog.keyword": [
+      "16/Sep/2021:14:04:46 +0200"
+    ],
+    "geoip.country_code3": [
+      "FR"
+    ],
+    "geoip.location": [
+      {
+        "coordinates": [
+          4.7387,
+          46.1248
+        ],
+        "type": "Point"
+      }
+    ],
+    "geoip.country_code2": [
+      "FR"
+    ],
+    "host.os.kernel": [
+      "3.10.0-1160.31.1.el7.x86_64"
+    ],
+    "@version": [
+      "1"
+    ],
+    "host.os.name.keyword": [
+      "Red Hat Enterprise Linux Server"
+    ],
+    "log.file.path.keyword": [
+      "/var/log/ZUR30/BDIG/access.log"
+    ],
+    "user_agent.minor": [
+      "0"
+    ],
+    "host.os.codename.keyword": [
+      "Maipo"
+    ],
+    "IP+CITY": [
+      "86.207.254.196 - Saint-Jean-d'Ardieres"
+    ],
+    "request.keyword": [
+      "/content/ca/cr878/npc/fr/particulier/acceder-a-mes-comptes/_jcr_content/contexthub.commerce.smartlists.json"
+    ],
+    "user_agent.major": [
+      "92"
+    ],
+    "adabo": [
+      "zur30"
+    ],
+    "geoip.postal_code": [
+      "69220"
+    ],
+    "host.os.family.keyword": [
+      "redhat"
+    ],
+    "referrer": [
+      "\"https://hom1-npc-pilote.credit-agricole.fr/ca-centrest/particulier/acceder-a-mes-comptes.html\""
+    ],
+    "verb.keyword": [
+      "GET"
+    ],
+    "user_agent.os": [
+      "Windows"
+    ],
+    "geoip.coordinates.keyword": [
+      "4.7387",
+      "46.1248"
+    ],
+    "host.os.platform.keyword": [
+      "rhel"
+    ],
+    "bytes": [
+      17407
+    ],
+    "user_agent.device": [
+      "Other"
+    ],
+    "user_agent.navigateurComplet": [
+      "Chrome.92.0"
+    ],
+    "httpversion": [
+      "1.1"
+    ],
+    "geoip.timezone.keyword": [
+      "Europe/Paris"
+    ],
+    "referrer.keyword": [
+      "\"https://hom1-npc-pilote.credit-agricole.fr/ca-centrest/particulier/acceder-a-mes-comptes.html\""
+    ]
+  },
+  "sort": [
+    1631793886000
+  ]
+}

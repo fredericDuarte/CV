@@ -1,0 +1,55 @@
+GET /al_zur_p0281_s0638_errorlog/_search
+{	
+   "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "host.hostname": "hlzurp0apa3e.yres.ytech"
+          }
+        },
+        {
+          "range": {
+            "@timestamp": {
+              "gt": "now-15m"
+            }
+          }
+        }
+      ]
+    }
+  },
+  
+  
+  
+  
+  "aggs": {
+                    "table": {
+                      "composite": {
+                         "sources": [
+                         {"level": {"terms": {"field": "level.keyword"  }}},
+                         {"adabo": {"terms": {"field": "adabo.keyword" }}}
+
+                        ]
+                      },
+                      
+                                     "aggs" : 
+                                      {
+                                        "messageLog": 
+                                        {
+                                               "terms": {
+                                                "field": "messageLog.keyword"
+                                               }
+                                        }
+                                       
+                                     }
+
+                    }
+
+                  }
+                                      
+  
+
+         
+
+      
+}
