@@ -1,0 +1,63 @@
+      "index": "al_zud_p0281_s0638_aemnpclog"
+
+
+{
+  "_score": 1,
+  "_source": 
+  {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "hostname": "hlzudt1exe3b.yres.ytech",
+      "id": "1",
+      "version": "7.5.2",
+    },
+    "adabo": "zuda0"
+  }
+},
+{
+  "_score": 1,
+  "_source": 
+  {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "hostname": "hlzudt1exe3b.yres.ytech",
+      "id": "1",
+      "version": "7.5.2",
+    },
+    "adabo": "zuda0"
+  }
+},
+{
+  "_score": 1,
+  "_source": 
+  {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "hostname": "hlzudt1exe3b.yres",
+      "id": "2",
+      "version": "7.5.2",
+    },
+    "adabo": "zuda0"
+  }
+},
+{
+  "_score": 1,
+  "_source": 
+  {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "hostname": "hlzudt1exe3b.yres",
+      "id": "3",
+      "version": "7.5.2",
+    },
+    "adabo": "zuda0"
+  }
+}

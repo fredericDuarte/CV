@@ -1,0 +1,205 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "An example of Cartesian layouts for a node-link diagram of hierarchical data.",
+  "width": 600,
+  "height": 500,
+  "padding": 5,
+  "autosize":"none"
+
+  "signals": [
+    {
+      "name": "labels", "value": true,
+      "bind": {"input": "checkbox"}
+    },
+    {
+      "name": "layout", "value": "tidy",
+      "bind": {"input": "radio", "options": ["tidy", "cluster"]}
+    },
+    {
+      "name": "links", "value": "diagonal",
+      "bind": {
+        "input": "select",
+        "options": ["line", "curve", "diagonal", "orthogonal"]
+      }
+    },
+    {
+      "name": "separation", "value": false,
+      "bind": {"input": "checkbox"}
+    }
+  ],
+
+  "data": [
+       {
+      "name": "tree",
+      "url": {
+         "index": "al_zud_p0281_s0638_errorlog" ,
+         "body":{
+                   "aggs": {
+                    "table": {
+                      "composite": {
+                        "sources": [
+                         {"level": {"terms": {"field": "level.keyword"  }}},
+                         {"adabo": {"terms": {"field": "adabo.keyword" }}},
+                         {"hostname":{"terms":{"field": "host.name.keyword"}}}
+                        ,{"message":{"terms":{"field": "messageLog.keyword"}}}
+                          
+                        ]
+                      }
+                    }
+                  },
+                  
+                  
+                  
+                "size": 1000  
+                  
+              }
+  
+      },
+      "format": {
+        property: "aggregations.table.buckets"
+      },
+      "transform": [
+         {
+          "type": "project",
+          "fields": [ 
+            "key.level",
+            "key.adabo",
+            "key.hostname",
+            "key.message"
+          ],
+          "as": [
+            "error",
+            "adab",
+            "hostname",
+            "message"
+          ]
+        },
+
+                
+        {
+          "type":"filter"
+           "expr" :"datum.message != 'undefined' "
+        },
+
+
+        
+        {
+          "type" : "formula",
+          "expr": "split(datum.message,regexp(/(?<=.[a-zA-Z0-9_]{5,}):/),3)",
+          "as": "split1"
+        },
+
+         {
+          "type" : "formula",
+          "expr": "split(datum.split1[1],regexp(/(?=\\.[^.]+$)./),3)",
+          "as": "split2"
+        },
+        {
+          "type" : "formula",
+          "expr" :"datum.split2[0]",
+          "as": "errorInfo"
+           
+        },
+        {
+          "type": "nest",
+          "generate": "true",
+          "keys": ["error", "adab"]
+        },
+        {
+          "type": "tree",
+          "method": {"signal": "layout"},
+          "size": [{"signal": "height"}, {"signal": "width - 150"}],
+          "separation": {"signal": "separation"},
+          "as": ["y", "x", "depth", "children"]
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "source": "tree",
+      "transform": [
+        { "type": "treelinks" },
+        {
+          "type": "linkpath",
+          "orient": "horizontal",
+          "shape": {"signal": "links"}
+        }
+      ]
+    },
+    {
+      "name": "tree-boxes",
+      "source": "tree",
+      "transform": [
+          { 
+            "type": "filter",
+            "expr": "datum.key != null "
+          },
+          { 
+            "type": "filter",
+            "expr": "datum.children != null"
+          }
+        ]
+    }
+
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "linear",
+      "range": {"scheme": "magma"},
+      "domain": {"data": "tree", "field": "depth"},
+      "zero": true
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "path",
+      "from": {"data": "links"},
+      "encode": {
+        "update": {
+          "path": {"field": "path"},
+          "stroke": {"value": "#ccc"}
+        }
+      }
+    },
+     {
+      "type": "symbol",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "size": {"value": 70},
+          "stroke": {"value": "#fff"}
+        },
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "fill": {"scale": "color", "field": "depth"}
+        }
+      }
+    },
+
+
+    {
+      "type": "text",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "text": {
+            "signal":"datum.key!=null ? datum.key +  '  [ '+ datum.children  +' ]' : datum.errorInfo "
+             }, 
+          "fontSize": {"value": 10},
+          "baseline": {"value": "middle"}
+        },
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y", "type":""},
+          "dx": {"signal": "datum.children ? -7 : 7"},
+          "align": {"signal": "datum.children ? 'right' : 'left'"},
+          "opacity": {"signal": "1"}
+        }
+      }
+    }
+  ]
+}
